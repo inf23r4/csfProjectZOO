@@ -7,11 +7,11 @@ public class Animals {
 	private String descripcion;
 	private Boolean inVeterinarian;
 	
-	Animals( ){
-		nombre = "";
-		habitat = "";
-		descripcion = "";
-		inVeterinarian = false;
+	public Animals(String nombre, String habitat, String descripcion, boolean inVeterinarian) {
+		this.nombre = nombre;
+		this.habitat = habitat;
+		this.descripcion = descripcion;
+		this.inVeterinarian = inVeterinarian;
 	}
 	
 	public String getNombre(){
@@ -46,11 +46,14 @@ public class Animals {
 		this.inVeterinarian = inVeterinarian;
 	}
 	
-	void mostrar( ) {
-		System.out.println("Nombre: " + nombre );
-		System.out.println("Habitat: " + habitat );
-		System.out.println("Descripcion: " + descripcion );
-		System.out.println("en Veterinaria : " + inVeterinarian );
+	@Override
+	public String toString() {
+		String estado = "ldisponibe";
+		if(this.inVeterinarian==true) {
+			estado = "en Veterinaria";
+		}
+		return "nombre: "+this.nombre+"habitat: "
+		+this.habitat+"descripcion: "+this.descripcion+"estado: "+estado;
 	}
 	
 		
