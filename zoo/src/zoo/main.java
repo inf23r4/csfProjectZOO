@@ -80,7 +80,7 @@ public class main {
 		
 		System.out.println(habitats);
 		for(int i = 0; 1< habitats.size(); i++) {
-			System.out.println(habitats.get(i));
+			habitats.get(i).mostrarHabitat();
 		}
 	}
 }

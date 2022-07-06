@@ -14,6 +14,12 @@ public class Habitat{
 		animals.add(animal1);
 	}
 	
+	public void mostrarHabitat() {
+		for (int i = 0; i < animals.size(); i++) {
+			System.out.println(animals.get(i));
+		}
+	}
+	
 	public String getNombreHabitat(){
 		return nombreHabitat;
 	}
