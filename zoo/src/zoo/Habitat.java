@@ -20,6 +20,16 @@ public class Habitat{
 		}
 	}
 	
+	public Animal buscarAnimalNombre(String nombre) {
+		Animal animalAux = null;
+		for (int i = 0; i < animals.size(); i++) {
+			if(nombre.equals(animals.get(i).getNombre())) {
+				animalAux = animals.get(i);
+			} 
+		}
+		return animalAux;
+	}
+	
 	public String getNombreHabitat(){
 		return nombreHabitat;
 	}

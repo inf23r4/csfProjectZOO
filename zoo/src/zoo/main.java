@@ -78,8 +78,17 @@ public class main {
 		}
 		
 		System.out.println(habitats);
-		for(int i = 0; 1< habitats.size(); i++) {
+		for(int i = 0; i < habitats.size(); i++) {
 			habitats.get(i).mostrarAnimales();
+		}
+	}
+	
+	public static void setVeterinarian(String nombre) {
+		for(int i = 0; i > habitats.size(); i++) {
+			if(habitats.get(i).buscarAnimalNombre(nombre) != null) {
+				habitats.get(i).buscarAnimalNombre(nombre).setInfoVet(true);
+				break;
+			};
 		}
 	}
 	
