@@ -9,7 +9,6 @@ public class main {
 	
 	
 	public static void main(String[]arg) {
-		
 		int opcion = 0;
 		do {
 			System.out.println("1. Agregar animal");
@@ -24,9 +23,9 @@ public class main {
 			case 1:
 				System.out.println("Ingrese datos del animal: ");
 				sc.nextLine();
-				String[] datos = sc.nextLine(). split("//");
+				String[] datos = sc.nextLine(). split("&");
 				
-				Animals animals = new Animals(datos[0], datos[1], datos[2], false);
+				Animal animal = new Animal(datos[0], datos[1], datos[2], false);
 				
 				int numHabitat = 0;
 				String nombreHabitat = "";
@@ -37,21 +36,21 @@ public class main {
 					nombreHabitat = sc.nextLine();
 				}else {
 					for(int i = 0; i < habitats.size(); i++) {
-						System.out.println(i +  habitats.get(i).getNombreHabitat());
+						System.out.println(i + "--> " + habitats.get(i).getNombreHabitat());
 					}
-					System.out.println(habitats.size()+ "--->" + "nuevo habitat");
+					System.out.println(habitats.size() + "--> nuevo habitat");
 					System.out.println("Seleccione un numero de habitat");
 					numHabitat = sc.nextInt();
 					
 					if (numHabitat >= habitats.size()) {
-						System.out.println("Ingrese nombre del habitat: ");
+						System.out.println("Ingrese nombre del nuevo habitat: ");
 						sc.nextLine();
 						nombreHabitat = sc.nextLine();
 					}
 					
 					
 				}
-				agregarAnimal(numHabitat, nombreHabitat, animals);
+				agregarAnimal(numHabitat, nombreHabitat, animal);
 				
 				break;
 			case 2:
@@ -68,7 +67,7 @@ public class main {
 		}while(opcion !=4);
 	}
 	
-	public static void agregarAnimal(int numeroHabitat, String nombreHabitat, Animals animal1) {
+	public static void agregarAnimal(int numeroHabitat, String nombreHabitat, Animal animal1) {
 		
 		if(numeroHabitat < habitats.size()) {
 			habitats.get(numeroHabitat).agregarAnimalToHabitat(animal1);
@@ -80,7 +79,9 @@ public class main {
 		
 		System.out.println(habitats);
 		for(int i = 0; 1< habitats.size(); i++) {
-			habitats.get(i).mostrarHabitat();
+			habitats.get(i).mostrarAnimales();
 		}
 	}
+	
+	
 }

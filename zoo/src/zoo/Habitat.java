@@ -4,17 +4,17 @@ import java.util.ArrayList;
 
 public class Habitat{
 	private String nombreHabitat;
-	private ArrayList<Animals> animals = new ArrayList();
+	private ArrayList<Animal> animals = new ArrayList();
 	
 	public Habitat(String nombHabitat) {
 		this.nombreHabitat = nombHabitat;
 	}
 	
-	public void agregarAnimalToHabitat(Animals animal1) {
+	public void agregarAnimalToHabitat(Animal animal1) {
 		animals.add(animal1);
 	}
 	
-	public void mostrarHabitat() {
+	public void mostrarAnimales() {
 		for (int i = 0; i < animals.size(); i++) {
 			System.out.println(animals.get(i));
 		}
@@ -30,6 +30,6 @@ public class Habitat{
 	
 	@Override
 	public String toString() {
-		return "NOMBRE HABITAT:"+ this.nombreHabitat;
+		return "HABITAT: "+ this.nombreHabitat ;
 	}
 }

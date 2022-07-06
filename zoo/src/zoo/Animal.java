@@ -1,13 +1,13 @@
 package zoo;
 
-public class Animals {
+public class Animal {
 
 	private String nombre;
 	private String habitat;
 	private String descripcion;
 	private Boolean inVeterinarian;
 	
-	public Animals(String nombre, String habitat, String descripcion, boolean inVeterinarian) {
+	public Animal(String nombre, String habitat, String descripcion, boolean inVeterinarian) {
 		this.nombre = nombre;
 		this.habitat = habitat;
 		this.descripcion = descripcion;
@@ -48,12 +48,12 @@ public class Animals {
 	
 	@Override
 	public String toString() {
-		String estado = "ldisponibe";
+		String estado = "disponibe";
 		if(this.inVeterinarian==true) {
 			estado = "en Veterinaria";
 		}
-		return "nombre: "+this.nombre+"habitat: "
-		+this.habitat+"descripcion: "+this.descripcion+"estado: "+estado;
+		return " nombre:"+this.nombre+" habitat:"
+		+this.habitat+" descripcion:"+this.descripcion+" estado:"+estado;
 	}
 	
 		
