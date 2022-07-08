@@ -54,6 +54,9 @@ public class main {
 				
 				break;
 			case 2:
+				System.out.println("ingrese el nombre del animal");
+				String nombre =sc.nextLine();
+				setVeterinarian(nombre);
 				break;
 			case 3:
 				break;
@@ -84,13 +87,22 @@ public class main {
 	}
 	
 	public static void setVeterinarian(String nombre) {
+		int inVet = 0;
 		for(int i = 0; i > habitats.size(); i++) {
 			if(habitats.get(i).buscarAnimalNombre(nombre) != null) {
 				habitats.get(i).buscarAnimalNombre(nombre).setInfoVet(true);
+				inVet = 1;
 				break;
-			};
+			}
 		}
+		if (inVet==1) {
+			System.out.println("El animal"+ nombre+ " esta en veterinaria ");
+		}else {
+			System.out.println("No hay ningun"+ nombre + " en el zoo");
+		}
+		
 	}
+	
 	
 	
 }
