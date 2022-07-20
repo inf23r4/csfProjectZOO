@@ -55,8 +55,13 @@ public class main {
 				break;
 			case 2:
 				System.out.println("ingrese el nombre del animal");
+				sc.nextLine();
 				String nombre =sc.nextLine();
 				setVeterinarian(nombre);
+				
+				for (int i = 0; i < habitats.size(); i++) {
+					habitats.get(i).mostrarAnimales();
+				}
 				break;
 			case 3:
 				break;
